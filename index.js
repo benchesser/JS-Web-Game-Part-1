@@ -26,9 +26,17 @@ newImage('assets/well.png', '500px', '425px')
 //     sword.remove()
 // })
 
-let sword = newImage('assets/sword.png', '500px', '405px')
+function newItem(imgSrc, left, bottom) {
+    let newThing = newImage(imgSrc, left, bottom)
 
-sword.addEventListener('click', function(){
-    sword.remove()
-})
+    newThing.addEventListener('dblclick', function(){
+        newThing.remove()
+    })
+}
+
+newItem('assets/sword.png', '500px', '405px')
+newItem('assets/sheild.png', '165px', '185px')
+newItem('assets/staff.png', '600px', '100px')
+
+
 
